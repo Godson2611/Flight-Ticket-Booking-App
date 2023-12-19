@@ -12,4 +12,8 @@ app.use(cors());
 app.use(express.json());
 app.use("/", AppRoutes);
 
+app.get("/", (req, res) => {
+    res.send("Welcome to My Awesome Flight Booking Server! 🌐");
+});
+
 app.listen(PORT, () => console.log(`Server listening to port ${PORT}`));
