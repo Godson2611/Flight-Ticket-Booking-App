@@ -1,0 +1,1779 @@
+@charset "UTF-8";
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primaryColor: hsl(255, 50%, 48%);
+  --secondaryColor: hsl(180, 17%, 95%);
+  --colorOne: hsl(15,74%, 70%);
+  --colorTwo: hsl(28, 100%, 82%);
+  --hoverColor: hsl(225, 56%, 59%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 12%);
+  --textColor: hsl(240, 1%, 48%);
+  --borderColor: hsl(0,0%,93%);
+  --whiteColorDeam: hsl(0,0%,93%);
+  --greyText: rgb(145,145,145);
+  --greyBg: rgb(235, 232, 232);
+  --inputColor: hsl(330,12%,97%);
+  --boxShadow: box-shadow: rgba(0,0,0,0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  --transition: .4s ease-in-out;
+}
+
+body {
+  background: var(--whiteColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.icon {
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.none {
+  display: none;
+}
+
+.error {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  background: var(--primaryColor);
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  cursor: pointer;
+  color: var(--whiteColor);
+}
+.btn a {
+  color: var(--whiteColor);
+  font-weight: 500;
+}
+.btn:hover {
+  background: var(--hoverColor);
+}
+
+img, video {
+  width: 100%;
+  height: auto;
+}
+
+input {
+  font-size: 100%;
+  height: auto;
+}
+
+p {
+  font-size: 13px;
+  color: var(--greyText);
+  line-height: 22px;
+}
+
+h4 {
+  padding: 1rem 0;
+  font-weight: 700;
+  color: var(--blackColor);
+}
+
+h2 {
+  font-size: 25px;
+  padding: 1rem 0;
+  color: var(--blackColor);
+}
+
+.back-to-home-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: 20px auto 0;
+  display: block;
+  outline: none;
+}
+.back-to-home-button:hover {
+  background-color: #0056b3;
+}
+
+.flight-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-image: url("https://images.pexels.com/photos/4715493/pexels-photo-4715493.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+.flight-container .headers {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.flight-container .headers .flight-header {
+  text-align: center;
+  color: #333;
+  margin: 0;
+}
+.flight-container .headers .back-to-home-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  outline: none;
+}
+.flight-container .headers .back-to-home-button:hover {
+  background-color: #0056b3;
+}
+.flight-container .flight-intro {
+  width: 100%;
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+.flight-container .flight-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  padding: 20px;
+  width: calc(100% - 40px);
+  transition: transform 0.2s;
+}
+.flight-container .flight-card:hover {
+  transform: scale(1.1);
+}
+.flight-container .flight-card .flight-title {
+  color: #333;
+  margin-bottom: 10px;
+}
+.flight-container .flight-card button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  outline: none;
+  margin-top: 10px;
+}
+.flight-container .flight-card button:hover {
+  background-color: #218838;
+}
+@media (min-width: 600px) {
+  .flight-container .flight-card {
+    width: calc(50% - 40px);
+  }
+}
+@media (min-width: 900px) {
+  .flight-container .flight-card {
+    width: calc(33% - 40px);
+  }
+}
+@media (max-width: 768px) {
+  .flight-container .headers {
+    flex-direction: column;
+    align-items: center;
+  }
+  .flight-container .headers .back-to-home-button {
+    margin-top: 15px;
+  }
+  .flight-container .flight-card {
+    width: calc(100% - 40px);
+  }
+}
+
+.features {
+  width: 80%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+.features h1 {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.features section {
+  margin-bottom: 2em;
+}
+.features section h2 {
+  color: #3498db;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+.features section p {
+  color: #34495e;
+  font-size: 1em;
+  line-height: 1.5;
+}
+.features section ul {
+  list-style-type: none;
+  padding-left: 1em;
+}
+.features section ul li {
+  margin-bottom: 1em;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+.features section ul li::before {
+  content: "• ";
+  color: #3498db;
+}
+@media (max-width: 768px) {
+  .features {
+    width: 90%;
+  }
+  .features h1 {
+    font-size: 1.5em;
+  }
+  .features p, .features li {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 480px) {
+  .features {
+    width: 100%;
+  }
+  .features h1 {
+    font-size: 1.2em;
+  }
+  .features p, .features li {
+    font-size: 0.8em;
+  }
+}
+
+.howto {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+.howto h1 {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.howto p {
+  color: #34495e;
+  font-size: 1em;
+  line-height: 1.5;
+}
+.howto ol {
+  counter-reset: item;
+  list-style-type: none;
+}
+.howto ol li {
+  counter-increment: item;
+  margin-bottom: 1em;
+}
+.howto ol li::before {
+  content: counter(item);
+  margin-right: 0.5em;
+  font-size: 1.2em;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 50%;
+  width: 1.2em;
+  height: 1.2em;
+  text-align: center;
+  display: inline-block;
+}
+.howto ol li strong {
+  color: #2c3e50;
+}
+@media (max-width: 768px) {
+  .howto {
+    width: 90%;
+  }
+  .howto h1 {
+    font-size: 1.5em;
+  }
+  .howto p {
+    font-size: 0.9em;
+  }
+}
+@media (max-width: 480px) {
+  .howto {
+    width: 100%;
+  }
+  .howto h1 {
+    font-size: 1.2em;
+  }
+  .howto p {
+    font-size: 0.8em;
+  }
+}
+
+.faq {
+  width: 80%;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+}
+.faq h1 {
+  color: #2c3e50;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.faq section {
+  margin-bottom: 2em;
+}
+.faq section h2 {
+  color: #3498db;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+.faq section ul {
+  list-style-type: none;
+}
+.faq section ul li {
+  margin-bottom: 1em;
+  padding-left: 1em;
+  text-indent: -1em;
+}
+.faq section ul li::before {
+  content: "• ";
+  color: #3498db;
+}
+.faq section ul li strong {
+  color: #2c3e50;
+}
+
+.no-flights {
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+.no-flights h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.no-flights p {
+  color: #666;
+  font-size: 18px;
+}
+.no-flights button {
+  background-color: #008CBA;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+.no-flights button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+.navBar {
+  position: fixed;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1000;
+}
+.navBar .navBarOne,
+.navBar .navBarTwo {
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+}
+.navBar .navBarOne {
+  background: var(--secondaryColor);
+}
+.navBar .navBarOne .icon:hover {
+  color: var(--primaryColor);
+}
+.navBar .navBarOne .atb {
+  gap: 1rem;
+}
+.navBar .navBarOne .atb span {
+  color: var(--blackColor);
+  font-size: 13px;
+  cursor: pointer;
+}
+.navBar .navBarOne .atb span:hover {
+  color: var(--primaryColor);
+  font-weight: 700;
+}
+.navBar .navBarOne .atb .welcomeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  color: var(--blackColor);
+}
+.navBar .navBarOne .atb .welcomeButton:hover {
+  color: var(--primaryColor);
+  font-weight: 700;
+}
+.navBar .navBarOne .atb .welcomeButton span {
+  font-size: 1.1em;
+  margin-right: 8px;
+}
+.navBar .navBarTwo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 3rem;
+  padding: 1.5rem 1rem;
+  position: fixed;
+  transition: 0.3s ease-in-out;
+}
+.navBar .navBarTwo .logoDiv .logo {
+  width: 20%;
+}
+@media screen and (max-width: 768px) {
+  .navBar .navBarTwo .navBarMenu {
+    position: absolute;
+    background: var(--secondaryColor);
+    padding: 1.5rem;
+    border-radius: 10px;
+    top: 5rem;
+    right: -50%;
+    width: 80%;
+    transform: translate(50%);
+    z-index: 2000;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    border: 3px solid var(--whiteColor);
+    transition: 0.4s ease-in-out;
+  }
+  .navBar .navBarTwo .navBarMenu .menu {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .navBar .navBarTwo .navBarMenu .menu .listItem {
+    padding: 0.5rem 0;
+    cursor: pointer;
+    color: var(--blackColor);
+  }
+  .navBar .navBarTwo .navBarMenu .menu .listItem:hover {
+    color: var(--primaryColor);
+    font-weight: 700;
+  }
+  .navBar .navBarTwo .navBarMenu .btnOne {
+    display: block;
+    justify-content: center;
+    margin: auto;
+    margin-top: 1rem;
+  }
+  .navBar .navBarTwo .btnTwo {
+    display: none;
+  }
+}
+.navBar .navBarTwo .toggleIcon .icon {
+  font-size: 30px;
+  color: var(--blackColor);
+}
+.navBar .navBarTwo .showNavBar {
+  right: 50%;
+  transition: 0.5s ease-in-out;
+}
+.navBar .navBar_With_Bg {
+  background: var(--secondaryColor);
+  padding: 0.5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.header {
+  padding: 10rem;
+  text-align: center;
+  gap: 2rem;
+  flex-direction: column;
+}
+.header .mainText {
+  color: var(--blackColor);
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 2.5rem;
+}
+.header .headerImages {
+  width: 100%;
+  margin: 1rem auto 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 5rem;
+}
+.header .headerImages .videoDiv {
+  width: 100%;
+}
+.header .headerImages .videoDiv .video {
+  border-radius: 10rem;
+}
+.header .headerImages .plane {
+  position: absolute;
+  width: 100%;
+  top: -10%;
+  left: -19%;
+}
+
+.search .sectionContainer {
+  width: 100%;
+  padding: 1.5rem;
+  border: 2px solid var(--greyBg);
+  border-radius: 2rem;
+}
+.search .sectionContainer .btns {
+  background: var(--secondaryColor);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.search .sectionContainer .btns .singleBtn {
+  padding: 0.8rem 1.5rem;
+  font-size: 13px;
+  border-radius: 3rem;
+  width: 80%;
+  text-align: center;
+}
+.search .sectionContainer .btns .singleBtn:hover {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  font-weight: 500;
+  transition: 0.4s ease;
+}
+.search .sectionContainer .btns .active {
+  background: var(--primaryColor);
+  color: var(--whiteColor);
+  font-weight: 500;
+}
+.search .sectionContainer .searchInputs {
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.search .sectionContainer .searchInputs .singleInput .iconDiv {
+  padding: 16px 10px;
+  border-radius: 3rem;
+  background: var(--secondaryColor);
+  margin-right: 1rem;
+}
+.search .sectionContainer .searchInputs .singleInput .iconDiv .icon {
+  color: var(--blackColor);
+  opacity: 0.7;
+}
+.search .sectionContainer .searchInputs .singleInput .texts h4 {
+  padding-top: 0;
+  padding-bottom: 0.7rem;
+  color: var(--blackColor);
+  font-weight: 700;
+}
+.search .sectionContainer .searchInputs .singleInput .texts input {
+  width: 95%;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.search .sectionContainer .searchInputs .singleInput .texts input::-moz-placeholder {
+  font-size: 12px;
+  opacity: 0.5;
+}
+.search .sectionContainer .searchInputs .singleInput .texts input::placeholder {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.support .sectionContainer .tittlesDiv {
+  text-align: center;
+}
+.support .sectionContainer .tittlesDiv small {
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: var(--blackColor);
+  line-height: 1.5rem;
+}
+.support .sectionContainer .infoDiv {
+  margin-top: 2rem;
+  gap: 1.5rem;
+}
+.support .sectionContainer .infoDiv .textDiv {
+  gap: 1.5rem;
+}
+.support .sectionContainer .infoDiv .textDiv .singleInfo .number {
+  background: var(--primaryColor);
+  padding: 5px 12px;
+  width: 40px;
+  border-radius: 3rem;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--whiteColor);
+}
+.support .sectionContainer .infoDiv .textDiv .singleInfo .colorOne {
+  background: var(--colorOne);
+}
+.support .sectionContainer .infoDiv .textDiv .singleInfo .colorTwo {
+  background: var(--colorTwo);
+}
+.support .sectionContainer .infoDiv .imgDiv {
+  margin: auto;
+}
+.support .sectionContainer .infoDiv .imgDiv img {
+  width: 100%;
+  max-width: 420px;
+}
+
+.info {
+  background: var(--secondaryColor);
+}
+.info .infoContainer .titleDiv {
+  flex-direction: column;
+  text-align: center;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+.info .infoContainer .cardsDiv {
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.info .infoContainer .cardsDiv .singleCard {
+  background: var(--whiteColor);
+  padding: 3rem 2rem;
+  border-radius: 10rem;
+  gap: 1rem;
+  text-align: center;
+  margin: auto;
+  height: 320px;
+  width: 90%;
+  max-width: 250px;
+}
+.info .infoContainer .cardsDiv .singleCard .iconDiv {
+  justify-content: center;
+  margin: auto;
+  background: var(--primaryColor);
+  width: -moz-max-content;
+  width: max-content;
+  height: 55px;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+.info .infoContainer .cardsDiv .singleCard .iconDiv .icon {
+  color: var(--whiteColor);
+}
+.info .infoContainer .cardsDiv .singleCard .cardTitle {
+  color: var(--blackColor);
+  font-weight: 700;
+}
+.info .infoContainer .cardsDiv .singleCard .colorOne {
+  background: var(--colorOne);
+}
+.info .infoContainer .cardsDiv .singleCard .colorTwo {
+  background: var(--colorTwo);
+}
+
+.lounge .sectionContainer {
+  gap: 1.5rem;
+}
+.lounge .sectionContainer .imgDiv {
+  margin: auto;
+}
+.lounge .sectionContainer .imgDiv img {
+  width: 100%;
+  max-width: 430px;
+}
+.lounge .sectionContainer .textDiv .grids {
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+.lounge .sectionContainer .textDiv .grids .singleGrid .gridTitle {
+  display: block;
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--blackColor);
+}
+
+.travelers {
+  text-align: center;
+}
+.travelers .sectionContainer {
+  text-align: center;
+}
+.travelers .sectionContainer .travelersContainer {
+  margin-top: 1rem;
+  gap: 1.5rem;
+}
+.travelers .sectionContainer .travelersContainer .singleTraveler {
+  position: relative;
+  height: 320px;
+  width: 85%;
+  max-width: 250px;
+  overflow: hidden;
+  border-radius: 10rem;
+  gap: 1rem;
+  margin: auto;
+}
+.travelers .sectionContainer .travelersContainer .singleTraveler .destinationImage,
+.travelers .sectionContainer .travelersContainer .singleTraveler .travelerImage,
+.travelers .sectionContainer .travelersContainer .singleTraveler .travelerName {
+  position: absolute;
+}
+.travelers .sectionContainer .travelersContainer .singleTraveler .destinationImage {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.travelers .sectionContainer .travelersContainer .singleTraveler .travelerImage {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  bottom: 30px;
+  left: 40%;
+  transform: translateX(-50%);
+  border: 5px solid rgba(225, 225, 225, 0.637);
+  transition: var(--transition);
+  animation: animated 2.3s infinite;
+}
+@keyframes animated {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.travelers .sectionContainer .travelersContainer .singleTraveler .travelerName {
+  bottom: -100%;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  background: var(--whiteColor);
+  padding: 1.5rem 1rem;
+  transition: var(--transition);
+  animation: animatedBorders 2.3s infinite;
+}
+.travelers .sectionContainer .travelersContainer .singleTraveler .travelerName span {
+  display: block;
+  color: black;
+  font-weight: 700;
+}
+.travelers .sectionContainer .travelersContainer .singleTraveler .travelerName p {
+  color: var(--primaryColor);
+  font-style: italic;
+}
+@keyframes animatedBorders {
+  0% {
+    border-radius: 0rem;
+  }
+  50% {
+    border-radius: 2rem;
+  }
+  100% {
+    border-radius: 0rem;
+  }
+}
+.travelers .sectionContainer .travelersContainer .singleTraveler:hover .travelerName {
+  bottom: 0;
+  transition: 1s ease-in-out;
+}
+.travelers .sectionContainer .travelersContainer .singleTraveler:hover .travelerImage {
+  bottom: 110px;
+  transition: 1s ease-in-out;
+}
+
+.footer {
+  background: var(--secondaryColor);
+}
+.footer .sectionContainer {
+  gap: 2.5rem;
+}
+.footer .sectionContainer .gridOne {
+  gap: 1rem;
+  justify-content: center;
+  margin: auto;
+}
+.footer .sectionContainer .gridOne .logoDiv .Logo {
+  width: 20%;
+}
+.footer .sectionContainer .gridOne .socialIcon {
+  margin-top: 1rem;
+  gap: 1rem;
+}
+.footer .sectionContainer .gridOne .socialIcon .icon {
+  height: 50px;
+  width: 30px;
+  border-radius: 10rem;
+  border: 1px solid var(--borderColor);
+  box-shadow: var(--boxShadow);
+  padding: 0.4rem;
+  color: var(--greyText);
+}
+.footer .sectionContainer .gridOne .socialIcon .icon:hover {
+  background: var(--primaryColor);
+  transform: translateY(-7px);
+  transition: var(--transition);
+  border: 1px solid var(--primaryColor);
+  color: var(--whiteColor);
+}
+.footer .sectionContainer .footerLinks {
+  display: grid;
+}
+.footer .sectionContainer .footerLinks .linkTitle {
+  color: var(--blackColor);
+  font-weight: 500;
+  display: block;
+  padding-bottom: 1rem;
+}
+.footer .sectionContainer .footerLinks li a {
+  display: block;
+  color: var(--greyText);
+  transition: var(--transition);
+  padding: 0.3rem 0;
+}
+.footer .sectionContainer .footerLinks li a:hover {
+  transform: translateX(7px);
+  color: var(--primaryColor);
+}
+.footer .copyRightDiv {
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  gap: 1rem;
+  border-top: 1px solid var(--greyText);
+  text-align: center;
+}
+
+.SignIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: hsl(0, 0%, 0%);
+}
+.SignIn h2 {
+  color: var(--whiteColor);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.SignIn form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid var(--borderColor);
+  border-radius: 10px;
+  padding: 20px;
+  background: var(--whiteColorDeam);
+  box-shadow: var(--boxShadow);
+}
+.SignIn form div {
+  margin-bottom: 10px;
+}
+.SignIn form div label {
+  margin-bottom: 5px;
+  color: var(--textColor);
+  font-weight: bold;
+}
+.SignIn form div input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--borderColor);
+  color: var(--textColor);
+  transition: var(--transition);
+}
+.SignIn form div input:focus {
+  border: 1px solid var(--primaryColor);
+}
+.SignIn form div p {
+  color: var(--colorOne);
+  margin-top: 5px;
+}
+.SignIn form button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.SignIn form button:hover {
+  background-color: var(--hoverColor);
+}
+
+.ForgotPassword {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: hsl(0, 0%, 0%);
+}
+.ForgotPassword h2 {
+  color: var(--whiteColor);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.ForgotPassword form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid var(--borderColor);
+  border-radius: 10px;
+  padding: 20px;
+  background: var(--whiteColorDeam);
+  box-shadow: var(--boxShadow);
+}
+.ForgotPassword form div {
+  margin-bottom: 10px;
+}
+.ForgotPassword form div label {
+  margin-bottom: 5px;
+  color: var(--textColor);
+  font-weight: bold;
+}
+.ForgotPassword form div input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--borderColor);
+  color: var(--textColor);
+  transition: var(--transition);
+}
+.ForgotPassword form div input:focus {
+  border: 1px solid var(--primaryColor);
+}
+.ForgotPassword form div p {
+  color: var(--colorOne);
+  margin-top: 5px;
+}
+.ForgotPassword form button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.ForgotPassword form button:hover {
+  background-color: var(--hoverColor);
+}
+
+.ResetPassword {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: hsl(0, 0%, 0%);
+}
+.ResetPassword h2 {
+  color: var(--whiteColor);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.ResetPassword form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid var(--borderColor);
+  border-radius: 10px;
+  padding: 20px;
+  background: var(--whiteColorDeam);
+  box-shadow: var(--boxShadow);
+}
+.ResetPassword form div {
+  margin-bottom: 10px;
+}
+.ResetPassword form div label {
+  margin-bottom: 5px;
+  color: var(--textColor);
+  font-weight: bold;
+}
+.ResetPassword form div input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--borderColor);
+  color: var(--textColor);
+  transition: var(--transition);
+}
+.ResetPassword form div input:focus {
+  border: 1px solid var(--primaryColor);
+}
+.ResetPassword form div p {
+  color: var(--colorOne);
+  margin-top: 5px;
+}
+.ResetPassword form button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.ResetPassword form button:hover {
+  background-color: var(--hoverColor);
+}
+
+.SignUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: hsl(0, 0%, 0%);
+}
+.SignUp h2 {
+  color: var(--whiteColor);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.SignUp form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid var(--borderColor);
+  border-radius: 10px;
+  padding: 20px;
+  background: var(--whiteColorDeam);
+  box-shadow: var(--boxShadow);
+}
+.SignUp form div {
+  margin-bottom: 10px;
+}
+.SignUp form div label {
+  margin-bottom: 5px;
+  color: var(--textColor);
+  font-weight: bold;
+}
+.SignUp form div input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--borderColor);
+  color: var(--textColor);
+  transition: var(--transition);
+}
+.SignUp form div input:focus {
+  border: 1px solid var(--primaryColor);
+}
+.SignUp form div p {
+  color: var(--colorOne);
+  margin-top: 5px;
+}
+.SignUp form button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.SignUp form button:hover {
+  background-color: var(--hoverColor);
+}
+
+.booking-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+.booking-details h2 {
+  color: #3f51b5;
+  margin-bottom: 20px;
+  animation: color-change 2s infinite;
+}
+.booking-details p, .booking-details ul {
+  width: 80%;
+  text-align: center;
+  line-height: 1.6;
+}
+.booking-details ul {
+  list-style-type: none;
+  padding: 0;
+}
+.booking-details ul li {
+  margin-bottom: 10px;
+}
+.booking-details ul li strong {
+  color: #333;
+}
+.booking-details button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3f51b5;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.booking-details button:hover {
+  background-color: #f50057;
+}
+
+.flights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  height: 100vh;
+  background: linear-gradient(to right, #340049, #000000);
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+.flights h2 {
+  margin-bottom: 20px;
+  animation: color-change 2s infinite;
+}
+.flights p, .flights ul {
+  width: 80%;
+  text-align: center;
+  line-height: 1.6;
+}
+.flights .table-container {
+  width: 80%;
+  max-height: 300px;
+  overflow-x: auto;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+.flights .table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.flights .table-container table th, .flights .table-container table td {
+  border: 1px solid rgba(113, 0, 119, 0.51);
+  padding: 8px;
+  text-align: left;
+  background-color: #fff;
+  color: #333;
+}
+.flights .table-container table th {
+  background-color: rgba(63, 81, 181, 0);
+  color: white;
+}
+.flights .table-container table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.flights .table-container table tr:hover {
+  background-color: rgba(29, 29, 29, 0.7529411765);
+}
+.flights button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3f51b5;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.flights button:hover {
+  background-color: #f50057;
+}
+@media (max-width: 768px) {
+  .flights p, .flights ul, .flights .table-container {
+    width: 95%;
+  }
+}
+@media (max-width: 480px) {
+  .flights p, .flights ul, .flights .table-container {
+    width: 100%;
+  }
+  .flights h2 {
+    font-size: 1.5em;
+  }
+  .flights p {
+    font-size: 0.875em;
+  }
+}
+
+.user-bookings {
+  font-family: "FormalFont", sans-serif;
+  color: #333;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+}
+.user-bookings h2 {
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeIn 2s;
+  font-size: 28px;
+}
+.user-bookings ul {
+  list-style-type: none;
+  padding: 0;
+  line-height: 1.6;
+  overflow-y: auto !important;
+}
+.user-bookings ul li {
+  background-color: #dedede;
+  border: 1px solid #cacaca;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+.user-bookings ul li div {
+  margin-bottom: 15px;
+}
+.user-bookings ul li button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin: 0 auto;
+  display: block;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  outline: none;
+}
+.user-bookings ul li button:hover {
+  background-color: #0056b3;
+}
+.user-bookings p {
+  text-align: center;
+  animation: fadeIn 2s;
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #000000;
+}
+.user-bookings .bold {
+  font-weight: 600;
+}
+.user-bookings .back-to-home-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: 20px auto 0;
+  display: block;
+  outline: none;
+}
+.user-bookings .back-to-home-button:hover {
+  background-color: #0056b3;
+}
+@media (max-width: 768px) {
+  .user-bookings {
+    width: 80%;
+    margin: 0 auto;
+    height: 100vh;
+  }
+  .user-bookings ul li {
+    padding: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.profile {
+  width: 100%;
+  height: 100vh;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.3s ease;
+}
+.profile:hover {
+  transform: scale(1.05);
+}
+.profile h1 {
+  color: #3f51b5;
+  text-align: center;
+  margin-bottom: 20px;
+  animation: color-change 2s infinite;
+}
+.profile p {
+  margin-bottom: 10px;
+  position: relative;
+}
+.profile p::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #3f51b5;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.profile p:hover::before {
+  visibility: visible;
+  width: 100%;
+}
+.profile p strong {
+  color: #333;
+}
+.profile button {
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+.profile button:not(:last-child) {
+  margin-right: 10px;
+}
+.profile button.edit {
+  background-color: #4caf50;
+  color: #fff;
+}
+.profile button.edit:hover {
+  background-color: #45a049;
+}
+.profile button.back {
+  background-color: #2159ff;
+  color: #fff;
+}
+.profile button.back:hover {
+  background-color: rgba(62, 88, 255, 0.8980392157);
+}
+.profile button.save {
+  background-color: #3f51b5;
+  color: #fff;
+}
+.profile button.save:hover {
+  background-color: #3949ab;
+}
+.profile button.cancel {
+  background-color: #f44336;
+  color: #fff;
+}
+.profile button.cancel:hover {
+  background-color: #d32f2f;
+}
+
+@keyframes color-change {
+  0% {
+    color: #3f51b5;
+  }
+  50% {
+    color: #f50057;
+  }
+  100% {
+    color: #3f51b5;
+  }
+}
+.flight-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-image: url("background.jpg");
+  background-size: cover;
+  padding: 20px;
+}
+.flight-container .flight-header {
+  width: 100%;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+.flight-container .flight-intro {
+  width: 100%;
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+.flight-container .flight-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  padding: 20px;
+  width: calc(100% - 40px);
+  transition: transform 0.2s;
+}
+.flight-container .flight-card:hover {
+  transform: scale(1.1);
+}
+.flight-container .flight-card .flight-title {
+  color: #333;
+  margin-bottom: 10px;
+}
+@media (min-width: 600px) {
+  .flight-container .flight-card {
+    width: calc(50% - 40px);
+  }
+}
+@media (min-width: 900px) {
+  .flight-container .flight-card {
+    width: calc(33% - 40px);
+  }
+}
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.map-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.map-description {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.home-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.home-button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (min-width: 480px) {
+  .home {
+    padding-top: 12rem;
+  }
+  .search .sectionContainer .searchInputs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .travelers .sectionContainer .travelersContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer .sectionContainer {
+    align-items: flex-start;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer .sectionContainer .footerLinks {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 570px) {
+  .home .mainText {
+    width: 80%;
+  }
+  .home .homeImages .video {
+    border-radius: 15rem;
+  }
+  .home .homeImages .plane {
+    position: absolute;
+    width: 95%;
+    top: -8%;
+  }
+  .search .sectionContainer .btns {
+    border-radius: 3rem;
+    flex-direction: row;
+  }
+  .support .sectionContainer .infoDiv .textDiv {
+    margin-top: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .info .infoContainer .titleDiv {
+    flex-direction: row;
+  }
+  .info .infoContainer .titleDiv h2 {
+    text-align: left;
+    max-width: 500px;
+  }
+  .info .infoContainer .cardsDiv {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lounge .sectionContainer .textDiv .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer .sectionContainer {
+    padding-top: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 680px) {
+  .home .mainText {
+    width: 80%;
+  }
+  .home .homeImages .videoDiv {
+    width: 80%;
+  }
+  .home .homeImages .videoDiv .video {
+    height: 100%;
+    width: 100%;
+    border-radius: 15rem;
+  }
+  .home .homeImages .plane {
+    width: 95%;
+    top: -8%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .navBar {
+    align-items: center;
+  }
+  .navBar .navBarOne .none {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .navBar .navBarOne .none li {
+    font-size: 13px;
+    gap: 0.5rem;
+    color: var(--textColor);
+  }
+  .navBar .navBarOne .none li:hover {
+    color: var(--primaryColor);
+    text-decoration: underline;
+  }
+  .navBar .navBarTwo {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navBar .navBarTwo .logoDiv .Logo {
+    max-width: 20%;
+  }
+  .navBar .navBarTwo .menu {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  .navBar .navBarTwo .menu .listItem {
+    padding: 0 0.5rem;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--textColor);
+    font-weight: 700;
+  }
+  .navBar .navBarTwo .menu .listItem:hover {
+    color: var(--primaryColor);
+    font-weight: 700;
+  }
+  .navBar .navBarTwo .btnOne, .navBar .navBarTwo .toggleIcon {
+    display: none;
+  }
+  .search .sectionContainer .btns {
+    width: 70%;
+    border-radius: 3rem;
+    flex-direction: row;
+  }
+  .search .sectionContainer .searchInputs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .search .sectionContainer .searchInputs .singleInput .texts input {
+    width: 100%;
+  }
+  .support .sectionContainer .infoDiv {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 5rem;
+  }
+  .support .sectionContainer .infoDiv .textDiv {
+    margin-top: 0rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .info .infoContainer {
+    padding: 0 6rem;
+  }
+  .info .infoContainer .titleDiv {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+  }
+  .info .infoContainer .cardsDiv {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .info .infoContainer .cardsDiv .singleCard {
+    max-width: 260px;
+    padding: 1.5rem;
+  }
+  .lounge .sectionContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lounge .sectionContainer .textDiv .grids {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .travelers .sectionContainer .travelersContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 960px) {
+  .home {
+    padding-top: 13rem;
+  }
+  .home .mainText {
+    width: 70%;
+    padding-bottom: 1.5rem;
+    font-size: 22px;
+    line-height: 4rem;
+  }
+  .search .sectionContainer .searchInputs {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .travelers .sectionContainer .travelersContainer {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 3rem 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  h2 {
+    font-size: 27px;
+  }
+  .section {
+    padding: 6rem 0 4rem;
+  }
+  .container {
+    width: 85%;
+    margin: auto;
+  }
+  .navBar .navBarOne, .navBar .navBarTwo {
+    padding: 1rem 5rem;
+  }
+  .navBar .navBar_With_Bg {
+    padding: 0 5rem;
+  }
+  .home .mainText {
+    width: 60%;
+    font-size: 25px;
+    line-height: 4rem;
+  }
+  .home .homeImages .videoDiv {
+    width: 90%;
+    height: 300px;
+  }
+  .home .homeImages .videoDiv .video {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 15rem;
+  }
+  .home .plane {
+    width: 100%;
+    top: -10%;
+  }
+}/*# sourceMappingURL=main.css.map */
