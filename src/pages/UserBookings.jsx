@@ -21,7 +21,7 @@ const UserBookings = () => {
       setLoading(false);
     } catch (error) {
       console.error(error);
-      toast.error("Error fetching user bookings");
+      // toast.error("Error fetching user bookings");
       setLoading(false);
     }
   };
