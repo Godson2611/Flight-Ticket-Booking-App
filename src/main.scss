@@ -321,6 +321,57 @@ h2{
   }
 }
 
+//admin page styling =====>
+.admin {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+
+  .row {
+    display: flex;
+    flex-direction: row;
+
+    .content {
+      margin-left: 20px;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      h1 {
+        color: #333;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      p {
+        color: #666;
+        line-height: 1.6;
+        font-size: 16px;
+      }
+
+      h2 {
+        color: #333;
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      ul {
+        padding-left: 20px;
+
+        li {
+          color: #666;
+          line-height: 1.6;
+          font-size: 16px;
+          list-style-type: square;
+        }
+      }
+    }
+  }
+}
+
+
 //HowTo page styling =====>
 .howto {
   width: 80%;

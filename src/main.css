@@ -295,6 +295,48 @@ h2 {
   }
 }
 
+.admin {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, sans-serif;
+}
+.admin .row {
+  display: flex;
+  flex-direction: row;
+}
+.admin .row .content {
+  margin-left: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.admin .row .content h1 {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+.admin .row .content p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 16px;
+}
+.admin .row .content h2 {
+  color: #333;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.admin .row .content ul {
+  padding-left: 20px;
+}
+.admin .row .content ul li {
+  color: #666;
+  line-height: 1.6;
+  font-size: 16px;
+  list-style-type: square;
+}
+
 .howto {
   width: 80%;
   height: 100%;
