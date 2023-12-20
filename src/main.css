@@ -1267,7 +1267,7 @@ h2 {
 }
 .flights .table-container {
   width: 80%;
-  max-height: 300px;
+  max-height: 430px;
   overflow-x: auto;
   overflow-y: auto;
   margin-bottom: 20px;

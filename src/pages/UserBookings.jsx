@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const UserBookings = () => {
   const [userBookings, setUserBookings] = useState([]);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -13,24 +14,30 @@ const UserBookings = () => {
 
   const getUserBookings = async () => {
     try {
+      setLoading(true);
       const response = await AxiosService.get("/book/userbookings");
       setUserBookings(response.data.bookings);
+      setLoading(false);
     } catch (error) {
       console.error(error);
       toast.error("Error fetching user bookings");
+      setLoading(false);
     }
   };
 
   const handleCancelBooking = async (bookingId) => {
     try {
+      setLoading(true);
       const response = await AxiosService.delete(
         `/book/cancelbooking/${bookingId}`
       );
       getUserBookings();
       toast.success(response.data.message);
+      setLoading(false);
     } catch (error) {
       console.error(error);
       toast.error("Error canceling booking");
+      setLoading(false);
     }
   };
 
@@ -41,7 +48,9 @@ const UserBookings = () => {
   return (
     <div className="user-bookings">
       <h2>Your Bookings</h2>
-      {userBookings.length > 0 ? (
+      {loading ? (
+        <p>Loading...</p>
+      ) : userBookings.length > 0 ? (
         <ul>
           {userBookings.map((booking) => (
             <li key={booking._id}>

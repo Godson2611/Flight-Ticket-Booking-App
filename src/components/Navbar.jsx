@@ -21,6 +21,14 @@ const Navbar = () => {
     setActive("navBarMenu");
   };
 
+  const getFlights = () =>{
+    navigate("/allflights")
+  }
+
+  const getBookings = () => {
+    navigate("/user-bookings")
+  }
+
   const toggleNavbar = () => {
     if (active === "navBarMenu") {
       showNavbar();
@@ -129,9 +137,11 @@ const Navbar = () => {
               Footer
             </li>
           </ul>
-          <button className='btn flex btnOne'>Contact</button>
-        </div>
-        <button className='btn flex btnTwo'>Contact</button>
+          <button className='btn flex btnOne' onClick={getFlights}>Book</button>
+          <button className='btn flex btnOne' onClick={getBookings}>Bookings</button>
+        </div> 
+        <button className='btn flex btnTwo' onClick={getFlights}>Book</button>
+        <button className='btn flex btnTwo' onClick={getBookings}>Bookings</button>
         <div onClick={toggleNavbar} className='toggleIcon'>
           <CgMenuGridO className='icon' />
         </div>
