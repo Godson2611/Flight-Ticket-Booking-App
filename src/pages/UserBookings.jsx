@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 const UserBookings = () => {
   const [userBookings, setUserBookings] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [cancelLoading, setCancelLoading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,17 +28,17 @@ const UserBookings = () => {
 
   const handleCancelBooking = async (bookingId) => {
     try {
-      setLoading(true);
+      setCancelLoading(true);
       const response = await AxiosService.delete(
         `/book/cancelbooking/${bookingId}`
       );
       getUserBookings();
       toast.success(response.data.message);
-      setLoading(false);
+      setCancelLoading(false);
     } catch (error) {
       console.error(error);
       toast.error("Error canceling booking");
-      setLoading(false);
+      setCancelLoading(false);
     }
   };
 
@@ -81,8 +82,9 @@ const UserBookings = () => {
                     {individualBooking.bookedSeats}
                     <button
                       onClick={() => handleCancelBooking(individualBooking._id)}
+                      disabled={cancelLoading}
                     >
-                      Cancel Booking
+                      {cancelLoading ? "Canceling..." : "Cancel Booking"}
                     </button>
                   </li>
                 ))}
