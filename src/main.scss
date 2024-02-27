@@ -11,23 +11,24 @@
   scroll-behavior: smooth;
 }
 
-:root{
-    --primaryColor: hsl(255, 50%, 48%);
-    --secondaryColor: hsl(180, 17%, 95%);
-    --colorOne: hsl(15,74%, 70%);
-    --colorTwo: hsl(28, 100%, 82%);
-    --hoverColor: hsl(225, 56%, 59%);
-    --whiteColor: hsl(0, 0%, 100%);
-    --blackColor: hsl(0, 0%, 12%);
-    --textColor: hsl(240, 1%, 48%);
-    --borderColor: hsl(0,0%,93%);
-    --whiteColorDeam: hsl(0,0%,93%);
-    --greyText: rgb(145,145,145);
-    --greyBg: rgb(235, 232, 232);
-    --inputColor: hsl(330,12%,97%);
-    --boxShadow: box-shadow: rgba(0,0,0,0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    --transition: .4s ease-in-out;
+:root {
+  --primaryColor: hsl(214, 81%, 41%); /* Adjusted primary color */
+  --secondaryColor: hsl(180, 7%, 97%); /* Adjusted secondary color */
+  --colorOne: hsl(41, 100%, 60%); /* Adjusted color one */
+  --colorTwo: hsl(28, 100%, 82%);
+  --hoverColor: hsl(225, 56%, 59%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 12%);
+  --textColor: hsl(240, 1%, 48%);
+  --borderColor: hsl(0, 0%, 93%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(145, 145, 145);
+  --greyBg: rgb(235, 232, 232);
+  --inputColor: hsl(330, 12%, 97%);
+  --boxShadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  --transition: 0.4s ease-in-out;
 }
+
 
 
 //Default styling =========>
@@ -83,7 +84,7 @@ li{
     background: var(--primaryColor);
     border: none;
     outline: none;
-    border-radius: 3rem;
+    border-radius: 1rem;
     cursor: pointer;
     color: var(--whiteColor);
     a{
@@ -664,42 +665,56 @@ h2{
     }
 }
 
-// Home Section styling =====>
+//header section styling ======>
 .header{
-    padding: 10rem;
-    text-align: center;
-    gap: 2rem;
-    flex-direction: column;
+  padding: 10rem;
+  text-align: center;
+  gap: 2rem;
+  flex-direction: column;
 
-    .mainText{
-        color: var(--blackColor);
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 2.5rem;
-    }
+  .mainText{
+      color: var(--blackColor);
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 2.5rem;
+  }
 
-    .headerImages{
-        width: 100%;
-        margin: 1rem auto 0;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        border-radius: 5rem;
+  .headerImages{
+      width: 100%;
+      margin: 1rem auto 0;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border-radius: 5rem;
 
-        .videoDiv{
-            width: 100%;
-            .video{
-                border-radius: 10rem;
-            }
-        }
-        .plane{
-            position: absolute;
-            width: 100%;
-            top: -10%;
-            left: -19%;
-        }
-    }
+      .videoDiv{
+          width: 100%;
+          .video{
+              border-radius: 3rem;
+          }
+      }
+      .plane{
+          position: absolute;
+          width: 100%;
+          top: -10%;
+          left: -19%;
+          animation: moveRightToLeft 10s linear infinite;
+      }
+  }
 }
+
+@keyframes moveRightToLeft {
+  0% {
+      transform: translateX(100%);
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(-100%);
+      opacity: 0.2;
+  }
+}
+
+
 
 // Search Section styling =====>
 .search {
@@ -811,7 +826,7 @@ h2{
                         background: var(--primaryColor);
                         padding: 5px 12px;
                         width: 40px;
-                        border-radius: 3rem;
+                        border-radius: 10px;
                         text-align: center;
                         font-size: 13px;
                         font-weight: 700;
@@ -832,6 +847,7 @@ h2{
                 margin: auto;
 
                 img{
+                    border-radius: 1rem;
                     width: 100%;
                     max-width: 420px;
                 }
@@ -858,7 +874,7 @@ h2{
             .singleCard{
                 background: var(--whiteColor);
                 padding: 3rem 2rem;
-                border-radius: 10rem;
+                border-radius: 2rem;
                 gap: 1rem;
                 text-align: center;
                 margin: auto;
@@ -873,7 +889,7 @@ h2{
                     width: max-content;
                     height: 55px;
                     padding: 1rem;
-                    border-radius: 3rem;
+                    border-radius: 1rem;
 
                     .icon{
                         color:var(--whiteColor);
@@ -945,7 +961,7 @@ h2{
             width: 85%;
             max-width: 250px;
             overflow: hidden;
-            border-radius: 10rem;
+            border-radius: 0.5rem;
             gap: 1rem;
             margin: auto;
             
@@ -969,7 +985,7 @@ h2{
             height: 50px;
             width: 50px;
             object-fit: cover;
-            border-radius: 50%;
+            border-radius: 20%;
             bottom: 30px;
             left: 40%;
             transform: translateX(-50%);
